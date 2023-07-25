@@ -17,10 +17,12 @@ margin-top: 30rem;
     position: relative;
     animation: eventmotion;
     animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 @keyframes eventmotion {
-    0% {left: -1000px}
+    0% {left: -800px}
+    0% {opacity: 0}
+    50% {opacity: 1}
     100% {left: 0px}
 }
 
@@ -28,11 +30,14 @@ margin-top: 30rem;
     position: relative;
     animation: studiomotion;
     animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
+    animation-delay: 1s;
 }
 
 @keyframes studiomotion {
-    0% {right: -1000px} 
+    0% {right: -800px} 
+    0% {opacity: 0}
+    50% {opacity: 1}
     100% {right: 0px}
 }
 
@@ -47,9 +52,9 @@ hr {
     font-size: 1rem;
     position: relative;
     animation: entermotion;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 4s;
     opacity: 0;
 }
 
