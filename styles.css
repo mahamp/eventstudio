@@ -86,7 +86,7 @@ hr {
     position: absolute;
     top: calc(50% - 200px);
     left: 2rem;
-    border:1px solid black;
+    border:2px solid black;
     height: 400px;
     width: 200px;
 display:flex;
