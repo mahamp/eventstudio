@@ -1,12 +1,26 @@
-.container {
-display: block;
-margin: auto;
-text-align: center;
-margin-top: 30rem;
+
+body {
+    margin: auto;
 }
 
+.all-items {
+    background-color: aliceblue;
+    height: 100%;
+} 
+
+.container {
+height: 100vh;
+display:flex;
+position: relative;
+align-items: center;
+text-align: center;
+justify-content: center;
+}
+
+
+
 .event,
-.studio {
+.office {
     display: inline-block;
     margin: 0.8rem;
     font-weight: bold;
@@ -19,6 +33,8 @@ margin-top: 30rem;
     animation-duration: 3s;
     animation-fill-mode: both;
 }
+
+
 @keyframes eventmotion {
     0% {left: -800px}
     0% {opacity: 0}
@@ -26,15 +42,15 @@ margin-top: 30rem;
     100% {left: 0px}
 }
 
-.studio {
+.office {
     position: relative;
-    animation: studiomotion;
+    animation: officemotion;
     animation-duration: 3s;
     animation-fill-mode: both;
     animation-delay: 1s;
 }
 
-@keyframes studiomotion {
+@keyframes officemotion {
     0% {right: -800px} 
     0% {opacity: 0}
     50% {opacity: 1}
@@ -56,6 +72,86 @@ hr {
     animation-fill-mode: forwards;
     animation-delay: 4s;
     opacity: 0;
+    cursor: pointer;
+}
+
+.active {
+    animation: filling;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+
+.navbar-container {
+    position: absolute;
+    top: calc(50% - 200px);
+    left: 2rem;
+    border:1px solid black;
+    height: 400px;
+    width: 200px;
+display:flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+    opacity: 0;
+}
+
+.nav-boarder {
+    animation: navboarder;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes navboarder {
+    0% {opacity: 0} 
+    100% {opacity: 1}
+}
+
+.navbar-items {
+    position: absolute;
+    top: calc(50% - 200px);
+    background: #0F2027; 
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); 
+color: azure;
+    height: 400px;
+    width: 200px;
+    border: 2px solid black;
+display:flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: center;
+/* transform: perspective(170px) rotateY(25deg); */
+    opacity: 0;
+}
+.nav-items {
+    animation: navitems;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes navitems {
+    0% {transform: perspective(190px) rotateY(30deg)}
+    0% {opacity: 1} 
+    50% {transform: perspective(190px) rotateY(30deg)}  
+    100% {transform: perspective(170px) rotateY(15deg)}
+    100% {opacity: 1}
+    0% {left: -200px;}
+    50% {left: 0;}
+    100% {left: 0;}
+    
+}
+
+.btnactive {
+    opacity: 1;
+    }
+@keyframes filling {
+    0% {right: 0} 
+    0% {opacity: 1}
+    100% {opacity: 0}
+    100% {right: 800px}
+    100% {cursor:default}
 }
 
 @keyframes entermotion {
