@@ -15,10 +15,10 @@ enterBtn.addEventListener('click', () => {
 enterBtn.addEventListener('click', () => {
     setTimeout (function () {
         navbarBackground.classList.add('nav-boarder');
-    } ,1000); 
+    } ,800); 
 })
 enterBtn.addEventListener('click', () => {
     setTimeout (function () {
         navbarItems.classList.add('nav-items');
-    } ,2000); 
+    } ,1700); 
 })
