@@ -41,6 +41,7 @@ justify-content: center;
     position: relative;
     animation: eventmotion;
     animation-duration: 3s;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
 }
 
@@ -56,6 +57,7 @@ justify-content: center;
     position: relative;
     animation: officemotion;
     animation-duration: 3s;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
 }
 
