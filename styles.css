@@ -40,8 +40,8 @@ justify-content: center;
 .event {
     position: relative;
     animation: eventmotion;
-    animation-duration: 3s;
-    animation-delay: 0.2s;
+    animation-duration: 2.7s;
+    animation-delay: 0.3s;
     animation-fill-mode: both;
 }
 
@@ -56,8 +56,8 @@ justify-content: center;
 .office {
     position: relative;
     animation: officemotion;
-    animation-duration: 3s;
-    animation-delay: 0.2s;
+    animation-duration: 2.7s;
+    animation-delay: 0.3s;
     animation-fill-mode: both;
 }
 
