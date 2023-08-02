@@ -1,12 +1,27 @@
 const enterBtn = document.querySelector('.enter')
-const eventOffice = document.querySelector('.event-office')
+const eventPart = document.querySelector('.event')
+const officePart = document.querySelector('.office')
 const toggleBtn = document.querySelector('.toggler')
 const navbarBackground = document.querySelector('.navbar-container')
 const navbarItems = document.querySelector('.navbar-items')
+const fadeOutBtn = document.querySelector('.fade-out__btn')
+const fadeOutHr = document.querySelector('.fade-out__hr')
 
 enterBtn.addEventListener('click', () => {
-    eventOffice.classList.add('active')
+    eventPart.classList.add('active-left')
 })
+
+enterBtn.addEventListener('click', () => {
+    officePart.classList.add('active-right')
+})
+enterBtn.addEventListener('click', () => {
+    fadeOutBtn.classList.add('fade-out-active')
+})
+
+enterBtn.addEventListener('click', () => {
+    fadeOutHr.classList.add('fade-out-active')
+})
+
 enterBtn.addEventListener('click', () => {
     setTimeout (function () {
         toggleBtn.classList.add('btnactive');

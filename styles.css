@@ -1,6 +1,13 @@
 
 body {
     margin: auto;
+  
+}
+button {
+    background: none;
+    padding: 0;
+    margin: inherit;
+
 }
 h1{
     font-family: 'Ysabeau Infant', sans-serif;  
@@ -39,10 +46,10 @@ justify-content: center;
 
 
 @keyframes eventmotion {
-    0% {left: -800px}
+    0% {transform: translateX(-700px)}
     0% {opacity: 0}
     50% {opacity: 1}
-    100% {left: 0px}
+    100% {transform: translateX(0)}
 }
 
 .office {
@@ -50,14 +57,13 @@ justify-content: center;
     animation: officemotion;
     animation-duration: 3s;
     animation-fill-mode: both;
-    animation-delay: 1s;
 }
 
 @keyframes officemotion {
-    0% {right: -800px} 
+    0% {transform: translateX(700px)} 
     0% {opacity: 0}
     50% {opacity: 1}
-    100% {right: 0px}
+    100% {transform: translateX(0)}
 }
 
 hr {
@@ -78,7 +84,7 @@ hr {
     animation: entermotion;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-delay: 3.5s;
+    animation-delay: 2.9s;
     opacity: 0;
     padding: 1rem;
     cursor: pointer;
@@ -88,9 +94,17 @@ color: rgb(62, 62, 62) ;
 border-color: rgb(62, 62, 62);
 }
 
-.active {
-    animation: filling;
+.active-left {
+    animation: swip-left;
     animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.active-right {
+    animation: swip-right;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
     animation-fill-mode: both;
 }
 
@@ -176,13 +190,31 @@ justify-content: center;
 .btnactive {
     opacity: 1;
     }
-@keyframes filling {
-    0% {right: 0} 
+@keyframes swip-left {
+    0% {transform: translateX(0)} 
     0% {opacity: 1}
     100% {opacity: 0}
-    100% {right: 800px}
+    100% {transform: translateX(-400px)}
     100% {cursor:default}
 }
+
+@keyframes swip-right {
+    0% {transform: translateX(0)} 
+    0% {opacity: 1}
+    100% {opacity: 0}
+    100% {transform: translateX(400px) }
+    
+}
+.fade-out-active {
+animation: fadeout 1s;
+animation-fill-mode: both;
+cursor: default;
+}
+
+@keyframes fadeout {
+    0% {opacity: 1} 
+    100% {opacity: 0}
+    }
 
 @keyframes entermotion {
     0% {opacity: 0} 
